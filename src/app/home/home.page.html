@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="wrapper"> 
+    <ion-card class="welcome-card" style="padding: 0 auto;">
+      <img src="/assets/avatar.jpg" alt="" />
+      <ion-card-header style="background-color: white;">
+        <ion-card-subtitle>Seja Bem-Vindo</ion-card-subtitle>
+        <ion-card-title>Usuário: {{usuarioLogado}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content style="background-color: white;">
+        <h2>Matrícula:{{matricula}}</h2>
+        <h2>Email: {{usuarioLogado}}@indracompany.com</h2>
+        <br/>
+        <p>Análise as solicitações dos colaboradores da empresa.</p>
+        <br/>
+        <ion-button expand="block" class="ion-no-margin" color="medium" (click)="logout()" [routerLink]="['']"  [routerDirection]="'root'"
+        routerLinkActive="router-link-active" >Sair</ion-button>
+      </ion-card-content>
+      
+    </ion-card>
+    </div>
+</ion-content>

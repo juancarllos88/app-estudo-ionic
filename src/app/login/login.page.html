@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="wrapper">  
+    <section style="margin-top: 10%;">
+      <ion-card class="welcome-card">
+        <img src="/assets/logo.jpg" alt="" />
+      </ion-card>
+    </section>
+    <form (ngSubmit)="salvar(usuarioForm)" #usuarioForm="ngForm"> 
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+                <ion-item>
+                    <ion-label position="stacked">Login <ion-text color="danger">*</ion-text></ion-label>
+                    <ion-input required type="text" [(ngModel)]="usuario.username" name="nome"></ion-input>
+                  </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              <div>
+                  <ion-item>
+                      <ion-label position="stacked">Senha <ion-text color="danger">*</ion-text></ion-label>
+                      <ion-input required type="password" [(ngModel)]="usuario.password" name="email"></ion-input>
+                    </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+      <div class="ion-padding">
+          <ion-button expand="block" type="submit" class="ion-no-margin">Entrar</ion-button>
+        </div>
+      </form>
+    </div>
+</ion-content>

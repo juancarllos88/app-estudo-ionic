@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Detalhamento
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <div class="wrapper"> 
+      <ion-card class="welcome-card">
+          <img src="{{solicitacao.img}}" alt="" />  
+          <ion-card-header style="background-color: white;">
+            <ion-card-subtitle>Dados da Solicitação:</ion-card-subtitle>
+            <ion-card-subtitle>Número: {{solicitacao.id}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content style="background-color: white;">
+              <h2>Inicio: {{solicitacao.startTime | date: 'dd/MM/yyyy HH:mm:ss'}}</h2>
+              <h2>Fim: {{solicitacao.endTime | date: 'dd/MM/yyyy HH:mm:ss'}}</h2>
+              <h2>Tipo: {{solicitacao.name}}</h2>
+              <h2>Status: {{status}}</h2>
+          </ion-card-content>
+        </ion-card>
+        </div>
+  </ion-content>
